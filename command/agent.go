@@ -677,7 +677,7 @@ func (c *AgentCommand) storePidFile(pidPath string) error {
 
 	// Write out the PID
 	pid := os.Getpid()
-	_, err = pidFile.WriteString(fmt.Sprintf("%d", pid))
+	_, err = pidFile.WriteString(strconv.Itoa(pid))
 	if err != nil {
 		return errwrap.Wrapf("could not write to pid file: {{err}}", err)
 	}

@@ -114,7 +114,7 @@ func TestSysUnseal(t *testing.T) {
 			"sealed":        true,
 			"t":             json.Number("3"),
 			"n":             json.Number("3"),
-			"progress":      json.Number(fmt.Sprintf("%d", i+1)),
+			"progress":      json.Number(strconv.Itoa(i + 1)),
 			"nonce":         "",
 			"type":          "shamir",
 			"recovery_seal": false,

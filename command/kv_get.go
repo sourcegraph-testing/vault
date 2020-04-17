@@ -104,7 +104,7 @@ func (c *KVGetCommand) Run(args []string) int {
 
 		if c.flagVersion > 0 {
 			versionParam = map[string]string{
-				"version": fmt.Sprintf("%d", c.flagVersion),
+				"version": strconv.Itoa(c.flagVersion),
 			}
 		}
 	}

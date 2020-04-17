@@ -38,8 +38,8 @@ type GenericMapResponse struct {
 }
 
 type HttpError struct {
-    error               // error type
-    StatusCode  int     // HTTP status
+	error          // error type
+	StatusCode int // HTTP status
 }
 
 // BackendType is the type of backend that is being implemented

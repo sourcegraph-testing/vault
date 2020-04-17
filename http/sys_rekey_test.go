@@ -210,7 +210,7 @@ func TestSysRekey_Update(t *testing.T) {
 				"required":              json.Number("3"),
 				"t":                     json.Number("3"),
 				"n":                     json.Number("5"),
-				"progress":              json.Number(fmt.Sprintf("%d", i+1)),
+				"progress":              json.Number(strconv.Itoa(i + 1)),
 				"verification_required": false,
 			}
 			testResponseStatus(t, resp, 200)

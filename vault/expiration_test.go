@@ -177,7 +177,7 @@ func TestExpiration_Tidy(t *testing.T) {
 	for i := 0; i < 1000; i++ {
 		req := &logical.Request{
 			Operation:   logical.ReadOperation,
-			Path:        "invalid/lease/" + fmt.Sprintf("%d", i+1),
+			Path:        "invalid/lease/" + strconv.Itoa(i+1),
 			ClientToken: "invalidtoken",
 		}
 		req.SetTokenEntry(&logical.TokenEntry{ID: "invalidtoken", NamespaceID: "root"})

@@ -155,7 +155,7 @@ func (c *KVRollbackCommand) Run(args []string) int {
 
 	// Set the version parameter
 	versionParam := map[string]string{
-		"version": fmt.Sprintf("%d", c.flagVersion),
+		"version": strconv.Itoa(c.flagVersion),
 	}
 
 	// Now run it again and read the version we want to roll back to
